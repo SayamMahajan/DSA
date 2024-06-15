@@ -1,2 +1,2 @@
 # DSA
-This repo will cover that I will learn in my DSA journey
+This repo will cover what I will learn in my DSA journey
