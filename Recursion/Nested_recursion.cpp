@@ -1,18 +1,19 @@
 #include<iostream>
 using namespace std;
 
-void fun(int n){
-    if (n>0){
-        cout<<n<<" ";
-        fun(n-1);
+int fun(int n){
+    if(n>100){
+        return n-10;
     }
-    
+    else{
+        return fun(fun(n+11));
+    }
 }
 
 int main(){
     int num;
     cout<<"Enter a number: ";
     cin>>num;
-    fun(num);
+    cout<<fun(num)<<endl;
     return 0;
 }
