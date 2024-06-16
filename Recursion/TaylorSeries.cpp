@@ -26,6 +26,19 @@ double e1(int x, int n){
     return e1(x, n-1);
 }
 
+//using iteration
+double e2(int x, int n){
+    double s=1;
+    double num=1, den=1;
+
+    for (int i = 1; i <= n; i++)
+    {
+        num*=x;
+        den*=i;
+        s+=num/den;
+    }
+    return s;
+}
 int main(){
     int num1, num2;
     cout<<"Enter the value of x: ";
