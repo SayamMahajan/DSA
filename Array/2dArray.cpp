@@ -19,3 +19,5 @@ int main(){
     B[2]= new int [4];
     return 0;
 }
+
+//row major mapping -- Addr(A[i][j]) = Lo + [i*n + j]*w
