@@ -21,3 +21,7 @@ int main(){
 }
 
 //row major mapping -- Addr(A[i][j]) = Lo + [i*n + j]*w
+
+/* type A[d1][d2][d3][d4];
+Addr(A[d1][d2][d3][d4])=Lo + [i1*d2*d3*d4 + i2*d3*d4 + i3*d4 + i4]*w 
+This can be simplified using horner's rule*/
