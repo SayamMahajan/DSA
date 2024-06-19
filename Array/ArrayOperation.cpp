@@ -38,12 +38,29 @@ int Delete(struct Array *arr, int index){
     return 0;
 }
 
+void swap(int *x,int *y){
+    int temp=*x;
+    *x=*y;
+    *y=temp;
+}
+
+int LinearSearch(struct Array *arr,int key){
+    int i;
+    for(i=0;i<arr->length;i++){
+        if(key==arr->A[i]){
+            swap(&arr->A[i],&arr->A[0]);  //move to head method, other method is called transposition
+            return i;                     // where element is moved one step forward
+        }
+    }
+    return -1;
+}
+
 int main(){
     struct Array arr{{1,2,3,4,5},10,5};
     
-    Delete(&arr, 2);
+    cout<<LinearSearch(&arr, 2)<<endl;
 
-    for (int i = 0; i < arr.size; i++){
+    for (int i = 0; i < arr.length; i++){
         cout<<arr.A[i]<<" ";
     }
     cout<<endl;
