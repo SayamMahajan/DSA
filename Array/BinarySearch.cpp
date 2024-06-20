@@ -49,3 +49,5 @@ int main(){
     cout<<BinarySearchR(arr.A,0,arr.length,4)<<endl;
     return 0;
 }
+
+//O(logn) is the time complexity of the binary search method
