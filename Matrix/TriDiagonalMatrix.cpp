@@ -1,15 +1,15 @@
 #include<iostream>
 using namespace std;
 
-class TriDigonalMatrix{
+class TriDiagonalMatrix{
     int n;
     int *A;
     public:
-        TriDigonalMatrix(int size){
+        TriDiagonalMatrix(int size){
             n = size;
             A = new int[3*n-2];
         }
-        ~TriDigonalMatrix(){
+        ~TriDiagonalMatrix(){
             delete []A;
             cout<<"Distructor is called"<<endl;
         }
@@ -65,7 +65,7 @@ int main(){
     cout<<"Enter the size: ";
     cin>>size;
 
-    TriDigonalMatrix d1(size);
+    TriDiagonalMatrix d1(size);
 
     cout<<"Enter the numbers: "<<endl;
     for(int i=1; i<=size; i++){
@@ -76,6 +76,6 @@ int main(){
     }
 
     d1.display();
-    d1.~TriDigonalMatrix();
+    d1.~TriDiagonalMatrix();
     return 0;
 }
